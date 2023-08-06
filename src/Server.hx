@@ -4,7 +4,7 @@ import sys.net.Address;
 import sys.net.Host;
 import sys.net.UdpSocket;
 import haxe.io.Bytes;
-using handle.OfflinePing;
+using handle.OfflinePingPong;
 class Server {
     private var HostName:String;
     private var Ip:String;
@@ -43,7 +43,7 @@ class Server {
 
             var packet:Bytes = bytes.sub(0,1);
             if(packet.toHex() == "01") {
-              offlineping = new OfflinePing(bytes,AllAdd,UdpServer);    
+              offlineping = new OfflinePingPong(bytes,AllAdd,UdpServer);    
               offlineping.Offline_Ping();
             }
            

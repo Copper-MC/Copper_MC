@@ -5,7 +5,7 @@ import haxe.io.BytesInput;
 import haxe.io.Bytes;
 import haxe.io.BytesOutput;
 import sys.net.Address;
-class OfflinePing {
+class OfflinePingPong {
     private var buf:Bytes;
     private var add:Address;
     private var socket:UdpSocket;
