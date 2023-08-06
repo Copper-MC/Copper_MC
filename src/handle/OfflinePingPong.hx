@@ -17,8 +17,6 @@ class OfflinePingPong {
     }
     public function Offline_Ping():Void {
 
-
-
         var packet:Bytes = buf.sub(0,1);
 
         trace("Packet Id: " + "0x" + packet.toHex());
@@ -64,6 +62,8 @@ class OfflinePingPong {
         trace(data.toHex());
 
         socket.sendTo(data,0,data.length,add);
+
+
 
     }
     
